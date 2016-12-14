@@ -32,7 +32,7 @@ for i = 1 : n         %样本循环
     for r = 1 : m     %基因循环
         for j = 1 : 2*k %同类、异类样本循环。
             for t =1: 2*k  %临时样本阵的样本循环。 
-                if (j <= k & t <= k) || (j > k & t > k )
+                if (j <= k && t <= k) || (j > k && t > k )
                     a = a + (data_hm (r, j) - data_hm (r, t))^2;
                 else
                     b = b + (data_hm (r, j) - data_hm (r, t))^2;

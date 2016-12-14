@@ -12,7 +12,7 @@ function [ b, style_1, style_2 ] = standardization ( a )
 
 style = a ( 1 , : );%找到样本标记行。
 [row, column] = size ( a );
-
+b=zeros(row-1, column);
 %对基因表达谱数据标准化。
 a = a ( 2 : row , : );%将样本标记行去掉。
 
